@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IVORA — Custom Business Automation Systems</title>
+  <meta name="description" content="IVORA designs and builds custom automation systems that eliminate repetitive work, connect your tools, and scale operations without a large tech team. Join the waitlist." />
+  <meta name="keywords" content="business automation, workflow automation, CRM automation, process automation, IVORA" />
+  <meta property="og:title" content="IVORA — Intelligence Value Operation and Reliable Automation" />
+  <meta property="og:description" content="Custom automation systems that save hours, reduce errors, and connect your entire stack." />
+  <meta property="og:type" content="website" />
+  <link rel="icon" type="image/jpeg" href="logo.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Background canvas for Three.js -->
+  <canvas id="hero-canvas" aria-hidden="true"></canvas>
+
+  <!-- Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo-link" aria-label="IVORA home">
+        <img src="logo.jpg" alt="IVORA logo" class="logo-img" width="140" height="40" />
+      </a>
+      <nav class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#use-cases">Use cases</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a href="#waitlist" class="btn btn-primary btn-sm">Join Waitlist</a>
+      <button class="mobile-toggle" aria-label="Toggle menu" id="mobile-toggle">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="#services">Services</a>
+      <a href="#how-it-works">How it works</a>
+      <a href="#use-cases">Use cases</a>
+      <a href="#faq">FAQ</a>
+      <a href="#waitlist" class="btn btn-primary">Join Waitlist</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <p class="eyebrow">Business Automation Systems</p>
+          <h1>Stop losing hours to manual work. Automate the operations that slow you down.</h1>
+          <p class="hero-sub">
+            IVORA designs and builds custom automation systems for businesses and service providers — connecting tools, eliminating repetitive tasks, and giving you cleaner, faster operations.
+          </p>
+          <div class="hero-ctas">
+            <a href="#waitlist" class="btn btn-primary">Join the Waitlist</a>
+            <a href="#how-it-works" class="btn btn-secondary">See how automation works</a>
+          </div>
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-value">10–20h</span>
+              <span class="stat-label">saved per week</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">Fewer errors</span>
+              <span class="stat-label">in data & follow-ups</span>
+            </div>
+            <div class="stat">
+              <span class="stat-value">Faster leads</span>
+              <span class="stat-label">response & handoff</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-form-card" id="waitlist">
+          <div class="form-header">
+            <h2>Join the waitlist</h2>
+            <p>Get early access. We’ll reach out to map your highest-ROI automations.</p>
+          </div>
+          <form id="waitlist-form" novalidate>
+            <div class="form-group">
+              <label for="fullName">Full name</label>
+              <input type="text" id="fullName" name="fullName" required placeholder="Alex Morgan" autocomplete="name" />
+            </div>
+            <div class="form-group">
+              <label for="email">Work email</label>
+              <input type="email" id="email" name="email" required placeholder="alex@company.com" autocomplete="email" />
+            </div>
+            <div class="form-group">
+              <label for="company">Company name</label>
+              <input type="text" id="company" name="company" required placeholder="Acme Ops" autocomplete="organization" />
+            </div>
+            <div class="form-group">
+              <label for="process">What process do you want to automate?</label>
+              <textarea id="process" name="process" rows="3" required placeholder="e.g. Lead follow-up from form → CRM → Slack + email sequence"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="budget">Monthly automation budget <span class="optional">(optional)</span></label>
+              <select id="budget" name="budget">
+                <option value="">Select a range</option>
+                <option value="under-1k">Under $1,000</option>
+                <option value="1k-3k">$1,000 – $3,000</option>
+                <option value="3k-7k">$3,000 – $7,000</option>
+                <option value="7k-plus">$7,000+</option>
+                <option value="not-sure">Not sure yet</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+              Request early access
+            </button>
+            <p class="form-note">No spam. We’ll only contact you about your automation needs.</p>
+          </form>
+          <div class="form-success" id="form-success" hidden>
+            <div class="success-icon">✓</div>
+            <h3>You’re on the list</h3>
+            <p>Thanks for joining. We’ll review your process and reach out within a few business days with next steps.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust strip -->
+    <section class="trust-strip">
+      <div class="container">
+        <p class="trust-label">Built for teams that run on tools</p>
+        <div class="trust-logos">
+          <span>CRM systems</span>
+          <span>Email & calendars</span>
+          <span>Spreadsheets</span>
+          <span>Payment tools</span>
+          <span>Support desks</span>
+          <span>Internal APIs</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="section problem" id="problem">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">The cost of manual work</p>
+          <h2>Manual processes quietly drain time and revenue</h2>
+          <p class="section-lead">
+            Most teams don’t lack effort — they lack reliable systems. Scattered tools, slow handoffs, and repetitive admin create delays, errors, and lost opportunities.
+          </p>
+        </div>
+        <div class="problem-grid">
+          <article class="problem-card">
+            <div class="card-icon">⏱</div>
+            <h3>Hours lost every week</h3>
+            <p>Copy-pasting data, chasing updates, and rebuilding the same reports keeps skilled people stuck in admin instead of high-value work.</p>
+          </article>
+          <article class="problem-card">
+            <div class="card-icon">🔗</div>
+            <h3>Disconnected tools</h3>
+            <p>CRM, email, spreadsheets, and support systems don’t talk to each other. Information lives in silos and follow-ups fall through the cracks.</p>
+          </article>
+          <article class="problem-card">
+            <div class="card-icon">⚠</div>
+            <h3>Human error & delays</h3>
+            <p>Manual data entry and inconsistent processes create mistakes, slow response times, and an uneven customer experience.</p>
+          </article>
+          <article class="problem-card">
+            <div class="card-icon">📈</div>
+            <h3>Hard to scale</h3>
+            <p>Growing volume without automation means hiring more people for the same repetitive work — or accepting lower quality and longer cycles.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="section services" id="services">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">What we build</p>
+          <h2>Automation systems tailored to how your business actually runs</h2>
+          <p class="section-lead">
+            We design and implement the workflows, integrations, and AI-assisted flows that remove friction from operations.
+          </p>
+        </div>
+        <div class="services-grid">
+          <article class="service-card">
+            <h3>Workflow automation</h3>
+            <p>End-to-end process automation: approvals, task routing, notifications, and multi-step sequences that run without constant oversight.</p>
+          </article>
+          <article class="service-card">
+            <h3>CRM automation</h3>
+            <p>Lead capture, enrichment, assignment, pipeline updates, and follow-up sequences so no opportunity sits idle in the system.</p>
+          </article>
+          <article class="service-card">
+            <h3>AI chat & support flows</h3>
+            <p>AI-assisted support and internal assistants that handle routine questions, triage tickets, and surface the right context to your team.</p>
+          </article>
+          <article class="service-card">
+            <h3>Data integrations</h3>
+            <p>Reliable syncs between CRMs, spreadsheets, payment tools, calendars, and internal systems — so data stays consistent across the stack.</p>
+          </article>
+          <article class="service-card">
+            <h3>Reporting dashboards</h3>
+            <p>Automated reporting and live views that pull clean data from multiple sources, reducing manual spreadsheet work and decision lag.</p>
+          </article>
+          <article class="service-card">
+            <h3>Custom API integrations</h3>
+            <p>Purpose-built connections and middleware when off-the-shelf tools fall short — designed for reliability and maintainability.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section how-it-works" id="how-it-works">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Process</p>
+          <h2>How IVORA works</h2>
+          <p class="section-lead">A clear path from current friction to reliable, documented systems.</p>
+        </div>
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">01</div>
+            <h3>Audit</h3>
+            <p>We map the processes that cost the most time and create the most risk. We identify high-ROI automation opportunities and the tools already in place.</p>
+          </div>
+          <div class="step-connector" aria-hidden="true"></div>
+          <div class="step">
+            <div class="step-num">02</div>
+            <h3>Build</h3>
+            <p>We design and implement the automations, integrations, and safeguards. Everything is documented and built for reliability, not just demos.</p>
+          </div>
+          <div class="step-connector" aria-hidden="true"></div>
+          <div class="step">
+            <div class="step-num">03</div>
+            <h3>Optimise</h3>
+            <p>We monitor performance, refine edge cases, and hand over clear runbooks so your team can own and extend the systems with confidence.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- USE CASES -->
+    <section class="section use-cases" id="use-cases">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Who we help</p>
+          <h2>Automation that fits your type of business</h2>
+        </div>
+        <div class="use-cases-grid">
+          <article class="use-case">
+            <h3>Agencies</h3>
+            <p>Client onboarding, reporting, proposal follow-ups, and internal task routing so delivery stays consistent as headcount and client volume grow.</p>
+          </article>
+          <article class="use-case">
+            <h3>Ecommerce</h3>
+            <p>Order status flows, customer support triage, inventory alerts, and marketing list hygiene across store, email, and CRM tools.</p>
+          </article>
+          <article class="use-case">
+            <h3>Consultants & coaches</h3>
+            <p>Lead qualification, booking-to-CRM sync, session follow-ups, and invoice reminders that keep the pipeline moving without admin overload.</p>
+          </article>
+          <article class="use-case">
+            <h3>Real estate</h3>
+            <p>Lead response automation, showing coordination, document collection, and pipeline updates so agents spend time with clients, not spreadsheets.</p>
+          </article>
+          <article class="use-case">
+            <h3>Healthcare admin</h3>
+            <p>Appointment reminders, intake form routing, insurance follow-ups, and internal status updates that reduce no-shows and back-office load.</p>
+          </article>
+          <article class="use-case">
+            <h3>SaaS & service businesses</h3>
+            <p>Trial-to-paid workflows, support escalation, usage-based alerts, and cross-tool data sync that keep product and ops aligned.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- RESULTS / BENEFITS -->
+    <section class="section results" id="results">
+      <div class="container">
+        <div class="section-header">
+          <p class="eyebrow">Outcomes</p>
+          <h2>What reliable automation delivers</h2>
+        </div>
+        <div class="results-grid">
+          <div class="result-card">
+            <span class="result-metric">10–20+</span>
+            <span class="result-unit">hours / week</span>
+            <p>Reclaimed from repetitive admin and data wrangling across typical mid-size operations.</p>
+          </div>
+          <div class="result-card">
+            <span class="result-metric">Faster</span>
+            <span class="result-unit">lead response</span>
+            <p>Automated capture, routing, and first-touch sequences cut response times from hours to minutes.</p>
+          </div>
+          <div class="result-card">
+            <span class="result-metric">Fewer</span>
+            <span class="result-unit">manual errors</span>
+            <p>Structured data flow and validation reduce copy-paste mistakes and inconsistent handoffs.</p>
+          </div>
+          <div class="result-card">
+            <span class="result-metric">Clearer</span>
+            <span class="result-unit">visibility</span>
+            <p>Live dashboards and automated reports replace spreadsheet archaeology with timely, trustworthy numbers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq">
+      <div class="container narrow">
+        <div class="section-header">
+          <p class="eyebrow">Questions</p>
+          <h2>Frequently asked</h2>
+        </div>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>What kinds of businesses does IVORA work with?</summary>
+            <p>We work with business owners, operations managers, agencies, consultants, and service providers who have clear process friction — especially where tools don’t connect and people are stuck in repetitive work.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do you only use no-code tools?</summary>
+            <p>We use the right mix for the job: no-code and low-code platforms when they are reliable and maintainable, and custom code or API work when the process demands it. Reliability and clarity come first.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How long does a typical engagement take?</summary>
+            <p>Scoped automations often go live in weeks, not months. Complex multi-system projects are phased so you see value early while we continue building the rest of the system.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Will we own the automations?</summary>
+            <p>Yes. Systems are built in your accounts where possible, documented, and handed over with clear runbooks so your team can operate and extend them.</p>
+          </details>
+          <details class="faq-item">
+            <summary>What does the waitlist process look like?</summary>
+            <p>Join the waitlist with a short description of the process you want to improve. We’ll review fit and reach out to schedule a focused conversation about priorities and next steps.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="section final-cta">
+      <div class="container">
+        <div class="final-cta-card">
+          <h2>Ready to stop doing the same work twice?</h2>
+          <p>Tell us the process that costs you the most time. We’ll show you what a reliable automation system looks like for your stack.</p>
+          <a href="#waitlist" class="btn btn-primary btn-lg">Join the waitlist</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="logo.jpg" alt="IVORA" class="logo-img" width="120" height="34" />
+        <p class="elevator">
+          IVORA designs and builds custom automation systems that eliminate repetitive work, connect your tools, and give your business cleaner operations. We turn manual processes into reliable, scalable workflows so you can focus on growth.
+        </p>
+      </div>
+      <div class="footer-links">
+        <a href="#services">Services</a>
+        <a href="#how-it-works">How it works</a>
+        <a href="#use-cases">Use cases</a>
+        <a href="#faq">FAQ</a>
+        <a href="#waitlist">Waitlist</a>
+      </div>
+      <p class="copyright">© 2026 IVORA. Intelligence Value Operation and Reliable Automation.</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
