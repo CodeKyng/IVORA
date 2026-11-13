@@ -75,48 +75,14 @@
           </div>
         </div>
 
-        <div class="hero-form-card" id="waitlist">
-          <div class="form-header">
-            <h2>Join the waitlist</h2>
-            <p>Get early access. We’ll reach out to map your highest-ROI automations.</p>
-          </div>
-          <form id="waitlist-form" novalidate>
-            <div class="form-group">
-              <label for="fullName">Full name</label>
-              <input type="text" id="fullName" name="fullName" required placeholder="Alex Morgan" autocomplete="name" />
+        <div class="hero-visual">
+          <div class="visual-frame">
+            <img src="hero.jpg" alt="IVORA automation system map — interconnected workflows and data flows" class="hero-img" width="640" height="480" />
+            <div class="visual-glow" aria-hidden="true"></div>
+            <div class="visual-badge">
+              <span class="badge-dot"></span>
+              Live system view
             </div>
-            <div class="form-group">
-              <label for="email">Work email</label>
-              <input type="email" id="email" name="email" required placeholder="alex@company.com" autocomplete="email" />
-            </div>
-            <div class="form-group">
-              <label for="company">Company name</label>
-              <input type="text" id="company" name="company" required placeholder="Acme Ops" autocomplete="organization" />
-            </div>
-            <div class="form-group">
-              <label for="process">What process do you want to automate?</label>
-              <textarea id="process" name="process" rows="3" required placeholder="e.g. Lead follow-up from form → CRM → Slack + email sequence"></textarea>
-            </div>
-            <div class="form-group">
-              <label for="budget">Monthly automation budget <span class="optional">(optional)</span></label>
-              <select id="budget" name="budget">
-                <option value="">Select a range</option>
-                <option value="under-1k">Under $1,000</option>
-                <option value="1k-3k">$1,000 – $3,000</option>
-                <option value="3k-7k">$3,000 – $7,000</option>
-                <option value="7k-plus">$7,000+</option>
-                <option value="not-sure">Not sure yet</option>
-              </select>
-            </div>
-            <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
-              Request early access
-            </button>
-            <p class="form-note">No spam. We’ll only contact you about your automation needs.</p>
-          </form>
-          <div class="form-success" id="form-success" hidden>
-            <div class="success-icon">✓</div>
-            <h3>You’re on the list</h3>
-            <p>Thanks for joining. We’ll review your process and reach out within a few business days with next steps.</p>
           </div>
         </div>
       </div>
@@ -341,13 +307,62 @@
       </div>
     </section>
 
-    <!-- FINAL CTA -->
-    <section class="section final-cta">
+    <!-- WAITLIST (moved to bottom) -->
+    <section class="section waitlist-section" id="waitlist">
       <div class="container">
-        <div class="final-cta-card">
-          <h2>Ready to stop doing the same work twice?</h2>
-          <p>Tell us the process that costs you the most time. We’ll show you what a reliable automation system looks like for your stack.</p>
-          <a href="#waitlist" class="btn btn-primary btn-lg">Join the waitlist</a>
+        <div class="waitlist-card">
+          <div class="waitlist-copy">
+            <p class="eyebrow">Early access</p>
+            <h2>Join the waitlist</h2>
+            <p class="waitlist-lead">
+              Tell us the process that costs you the most time. We’ll review your stack and reach out with a clear path to automate it.
+            </p>
+            <ul class="waitlist-points">
+              <li>Priority access when spots open</li>
+              <li>Focused conversation on your highest-ROI workflows</li>
+              <li>No spam — only relevant next steps</li>
+            </ul>
+          </div>
+          <div class="waitlist-form-wrap">
+            <form id="waitlist-form" novalidate>
+              <div class="form-group">
+                <label for="fullName">Full name</label>
+                <input type="text" id="fullName" name="fullName" required placeholder="Alex Morgan" autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="email">Work email</label>
+                <input type="email" id="email" name="email" required placeholder="alex@company.com" autocomplete="email" />
+              </div>
+              <div class="form-group">
+                <label for="company">Company name</label>
+                <input type="text" id="company" name="company" required placeholder="Acme Ops" autocomplete="organization" />
+              </div>
+              <div class="form-group">
+                <label for="process">What process do you want to automate?</label>
+                <textarea id="process" name="process" rows="3" required placeholder="e.g. Lead follow-up from form → CRM → Slack + email sequence"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="budget">Monthly automation budget <span class="optional">(optional)</span></label>
+                <select id="budget" name="budget">
+                  <option value="">Select a range</option>
+                  <option value="under-1k">Under $1,000</option>
+                  <option value="1k-3k">$1,000 – $3,000</option>
+                  <option value="3k-7k">$3,000 – $7,000</option>
+                  <option value="7k-plus">$7,000+</option>
+                  <option value="not-sure">Not sure yet</option>
+                </select>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+                Request early access
+              </button>
+              <p class="form-note">No spam. We’ll only contact you about your automation needs.</p>
+            </form>
+            <div class="form-success" id="form-success" hidden>
+              <div class="success-icon">✓</div>
+              <h3>You’re on the list</h3>
+              <p>Thanks for joining. We’ll review your process and reach out within a few business days with next steps.</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
