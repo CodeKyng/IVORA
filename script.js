@@ -1,4 +1,4 @@
-/* IVORA Landing — interactions + Three.js network */
+/* IVORA Landing — interactions + Three.js network + card glow */
 
 (function () {
   "use strict";
@@ -30,11 +30,9 @@
       submitBtn.disabled = true;
       submitBtn.textContent = "Submitting…";
 
-      // Simulate network + success (replace with real endpoint later)
       setTimeout(() => {
         form.hidden = true;
         success.hidden = false;
-        // Optional: scroll form into view on mobile
         success.scrollIntoView({ behavior: "smooth", block: "nearest" });
       }, 600);
     });
@@ -61,11 +59,30 @@
     revealEls.forEach((el) => el.classList.add("is-visible"));
   }
 
+  // ----- Mouse-tracking glow on glass cards -----
+  const glowCards = document.querySelectorAll(".glass-card");
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  if (!prefersReduced && glowCards.length) {
+    glowCards.forEach((card) => {
+      card.addEventListener(
+        "pointermove",
+        (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = ((e.clientX - rect.left) / rect.width) * 100;
+          const y = ((e.clientY - rect.top) / rect.height) * 100;
+          card.style.setProperty("--mouse-x", x + "%");
+          card.style.setProperty("--mouse-y", y + "%");
+        },
+        { passive: true }
+      );
+    });
+  }
+
   // ----- Three.js: subtle node network (automation motif) -----
   const canvas = document.getElementById("hero-canvas");
   if (!canvas || typeof THREE === "undefined") return;
 
-  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   if (prefersReduced) {
     canvas.style.display = "none";
     return;
@@ -85,7 +102,6 @@
   renderer.setSize(window.innerWidth, window.innerHeight);
   renderer.setClearColor(0x000000, 0);
 
-  // Node particles
   const NODE_COUNT = 48;
   const nodes = [];
   const positions = new Float32Array(NODE_COUNT * 3);
@@ -117,7 +133,6 @@
   const points = new THREE.Points(geometry, material);
   scene.add(points);
 
-  // Connection lines (dynamic)
   const MAX_DIST = 9.5;
   const linePositions = new Float32Array(NODE_COUNT * NODE_COUNT * 6);
   const lineGeo = new THREE.BufferGeometry();
@@ -130,7 +145,6 @@
   const lines = new THREE.LineSegments(lineGeo, lineMat);
   scene.add(lines);
 
-  // Soft ambient glow particles
   const GLOW_COUNT = 80;
   const glowPos = new Float32Array(GLOW_COUNT * 3);
   for (let i = 0; i < GLOW_COUNT; i++) {
@@ -170,7 +184,6 @@
         }
       }
     }
-    // Clear rest
     for (let k = idx; k < linePositions.length; k++) linePositions[k] = 0;
     lineGeo.attributes.position.needsUpdate = true;
     lineGeo.setDrawRange(0, idx / 3);
@@ -186,7 +199,6 @@
       n.x += n.vx;
       n.y += n.vy;
       n.z += n.vz;
-      // Soft bounds
       if (Math.abs(n.x) > 24) n.vx *= -1;
       if (Math.abs(n.y) > 16) n.vy *= -1;
       if (Math.abs(n.z) > 10) n.vz *= -1;
@@ -198,7 +210,6 @@
 
     if (frame % 2 === 0) updateConnections();
 
-    // Gentle camera drift
     camera.position.x = Math.sin(frame * 0.0012) * 1.8;
     camera.position.y = Math.cos(frame * 0.0009) * 1.2;
     camera.lookAt(0, 0, 0);
@@ -216,7 +227,6 @@
 
   window.addEventListener("resize", onResize, { passive: true });
 
-  // Pause when tab hidden
   document.addEventListener("visibilitychange", () => {
     if (document.hidden) {
       if (rafId) cancelAnimationFrame(rafId);

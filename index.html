@@ -77,7 +77,7 @@
 
         <div class="hero-visual">
           <div class="visual-frame">
-            <img src="hero.jpg" alt="IVORA automation system map — interconnected workflows and data flows" class="hero-img" width="640" height="480" />
+            <img src="hero.jpg" alt="IVORA automation system map — interconnected workflows and data flows" class="hero-img" width="640" height="480" onerror="this.style.display='none'" />
             <div class="visual-glow" aria-hidden="true"></div>
             <div class="visual-badge">
               <span class="badge-dot"></span>
@@ -114,23 +114,35 @@
           </p>
         </div>
         <div class="problem-grid">
-          <article class="problem-card">
-            <div class="card-icon">⏱</div>
+          <article class="problem-card glass-card">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            </div>
             <h3>Hours lost every week</h3>
             <p>Copy-pasting data, chasing updates, and rebuilding the same reports keeps skilled people stuck in admin instead of high-value work.</p>
           </article>
-          <article class="problem-card">
-            <div class="card-icon">🔗</div>
+          <article class="problem-card glass-card">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+            </div>
             <h3>Disconnected tools</h3>
             <p>CRM, email, spreadsheets, and support systems don’t talk to each other. Information lives in silos and follow-ups fall through the cracks.</p>
           </article>
-          <article class="problem-card">
-            <div class="card-icon">⚠</div>
+          <article class="problem-card glass-card">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+            </div>
             <h3>Human error & delays</h3>
             <p>Manual data entry and inconsistent processes create mistakes, slow response times, and an uneven customer experience.</p>
           </article>
-          <article class="problem-card">
-            <div class="card-icon">📈</div>
+          <article class="problem-card glass-card">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            </div>
             <h3>Hard to scale</h3>
             <p>Growing volume without automation means hiring more people for the same repetitive work — or accepting lower quality and longer cycles.</p>
           </article>
@@ -149,29 +161,54 @@
           </p>
         </div>
         <div class="services-grid">
-          <article class="service-card">
+          <article class="service-card glass-card featured">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
             <h3>Workflow automation</h3>
-            <p>End-to-end process automation: approvals, task routing, notifications, and multi-step sequences that run without constant oversight.</p>
+            <p>End-to-end process automation: approvals, task routing, notifications, and multi-step sequences that run without constant oversight. Built around your real process, not a template.</p>
+            <span class="card-tag">Core system</span>
           </article>
-          <article class="service-card">
+          <article class="service-card glass-card">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
             <h3>CRM automation</h3>
-            <p>Lead capture, enrichment, assignment, pipeline updates, and follow-up sequences so no opportunity sits idle in the system.</p>
+            <p>Lead capture, enrichment, assignment, pipeline updates, and follow-up sequences so no opportunity sits idle.</p>
           </article>
-          <article class="service-card">
+          <article class="service-card glass-card">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
             <h3>AI chat & support flows</h3>
-            <p>AI-assisted support and internal assistants that handle routine questions, triage tickets, and surface the right context to your team.</p>
+            <p>AI-assisted support and internal assistants that handle routine questions, triage tickets, and surface the right context.</p>
           </article>
-          <article class="service-card">
+          <article class="service-card glass-card">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+            </div>
             <h3>Data integrations</h3>
-            <p>Reliable syncs between CRMs, spreadsheets, payment tools, calendars, and internal systems — so data stays consistent across the stack.</p>
+            <p>Reliable syncs between CRMs, spreadsheets, payment tools, calendars, and internal systems — consistent data across the stack.</p>
           </article>
-          <article class="service-card">
+          <article class="service-card glass-card">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
             <h3>Reporting dashboards</h3>
-            <p>Automated reporting and live views that pull clean data from multiple sources, reducing manual spreadsheet work and decision lag.</p>
+            <p>Automated reporting and live views that pull clean data from multiple sources, reducing manual spreadsheet work.</p>
           </article>
-          <article class="service-card">
+          <article class="service-card glass-card">
+            <div class="card-glow" aria-hidden="true"></div>
+            <div class="icon-wrap" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+            </div>
             <h3>Custom API integrations</h3>
-            <p>Purpose-built connections and middleware when off-the-shelf tools fall short — designed for reliability and maintainability.</p>
+            <p>Purpose-built connections and middleware when off-the-shelf tools fall short — designed for reliability.</p>
           </article>
         </div>
       </div>
@@ -186,19 +223,22 @@
           <p class="section-lead">A clear path from current friction to reliable, documented systems.</p>
         </div>
         <div class="steps">
-          <div class="step">
+          <div class="step glass-card">
+            <div class="card-glow" aria-hidden="true"></div>
             <div class="step-num">01</div>
             <h3>Audit</h3>
             <p>We map the processes that cost the most time and create the most risk. We identify high-ROI automation opportunities and the tools already in place.</p>
           </div>
           <div class="step-connector" aria-hidden="true"></div>
-          <div class="step">
+          <div class="step glass-card">
+            <div class="card-glow" aria-hidden="true"></div>
             <div class="step-num">02</div>
             <h3>Build</h3>
             <p>We design and implement the automations, integrations, and safeguards. Everything is documented and built for reliability, not just demos.</p>
           </div>
           <div class="step-connector" aria-hidden="true"></div>
-          <div class="step">
+          <div class="step glass-card">
+            <div class="card-glow" aria-hidden="true"></div>
             <div class="step-num">03</div>
             <h3>Optimise</h3>
             <p>We monitor performance, refine edge cases, and hand over clear runbooks so your team can own and extend the systems with confidence.</p>
@@ -215,28 +255,34 @@
           <h2>Automation that fits your type of business</h2>
         </div>
         <div class="use-cases-grid">
-          <article class="use-case">
-            <h3>Agencies</h3>
+          <article class="use-case glass-card">
+            <div class="card-glow" aria-hidden="true"></div>
+            <h3><span class="dot" aria-hidden="true"></span> Agencies</h3>
             <p>Client onboarding, reporting, proposal follow-ups, and internal task routing so delivery stays consistent as headcount and client volume grow.</p>
           </article>
-          <article class="use-case">
-            <h3>Ecommerce</h3>
+          <article class="use-case glass-card">
+            <div class="card-glow" aria-hidden="true"></div>
+            <h3><span class="dot" aria-hidden="true"></span> Ecommerce</h3>
             <p>Order status flows, customer support triage, inventory alerts, and marketing list hygiene across store, email, and CRM tools.</p>
           </article>
-          <article class="use-case">
-            <h3>Consultants & coaches</h3>
+          <article class="use-case glass-card">
+            <div class="card-glow" aria-hidden="true"></div>
+            <h3><span class="dot" aria-hidden="true"></span> Consultants & coaches</h3>
             <p>Lead qualification, booking-to-CRM sync, session follow-ups, and invoice reminders that keep the pipeline moving without admin overload.</p>
           </article>
-          <article class="use-case">
-            <h3>Real estate</h3>
+          <article class="use-case glass-card">
+            <div class="card-glow" aria-hidden="true"></div>
+            <h3><span class="dot" aria-hidden="true"></span> Real estate</h3>
             <p>Lead response automation, showing coordination, document collection, and pipeline updates so agents spend time with clients, not spreadsheets.</p>
           </article>
-          <article class="use-case">
-            <h3>Healthcare admin</h3>
+          <article class="use-case glass-card">
+            <div class="card-glow" aria-hidden="true"></div>
+            <h3><span class="dot" aria-hidden="true"></span> Healthcare admin</h3>
             <p>Appointment reminders, intake form routing, insurance follow-ups, and internal status updates that reduce no-shows and back-office load.</p>
           </article>
-          <article class="use-case">
-            <h3>SaaS & service businesses</h3>
+          <article class="use-case glass-card">
+            <div class="card-glow" aria-hidden="true"></div>
+            <h3><span class="dot" aria-hidden="true"></span> SaaS & service businesses</h3>
             <p>Trial-to-paid workflows, support escalation, usage-based alerts, and cross-tool data sync that keep product and ops aligned.</p>
           </article>
         </div>
@@ -251,22 +297,26 @@
           <h2>What reliable automation delivers</h2>
         </div>
         <div class="results-grid">
-          <div class="result-card">
+          <div class="result-card glass-card">
+            <div class="card-glow" aria-hidden="true"></div>
             <span class="result-metric">10–20+</span>
             <span class="result-unit">hours / week</span>
             <p>Reclaimed from repetitive admin and data wrangling across typical mid-size operations.</p>
           </div>
-          <div class="result-card">
+          <div class="result-card glass-card">
+            <div class="card-glow" aria-hidden="true"></div>
             <span class="result-metric">Faster</span>
             <span class="result-unit">lead response</span>
             <p>Automated capture, routing, and first-touch sequences cut response times from hours to minutes.</p>
           </div>
-          <div class="result-card">
+          <div class="result-card glass-card">
+            <div class="card-glow" aria-hidden="true"></div>
             <span class="result-metric">Fewer</span>
             <span class="result-unit">manual errors</span>
             <p>Structured data flow and validation reduce copy-paste mistakes and inconsistent handoffs.</p>
           </div>
-          <div class="result-card">
+          <div class="result-card glass-card">
+            <div class="card-glow" aria-hidden="true"></div>
             <span class="result-metric">Clearer</span>
             <span class="result-unit">visibility</span>
             <p>Live dashboards and automated reports replace spreadsheet archaeology with timely, trustworthy numbers.</p>
@@ -283,84 +333,65 @@
           <h2>Frequently asked</h2>
         </div>
         <div class="faq-list">
-          <details class="faq-item">
+          <details class="faq-item glass-card">
             <summary>What kinds of businesses does IVORA work with?</summary>
             <p>We work with business owners, operations managers, agencies, consultants, and service providers who have clear process friction — especially where tools don’t connect and people are stuck in repetitive work.</p>
           </details>
-          <details class="faq-item">
+          <details class="faq-item glass-card">
             <summary>Do you only use no-code tools?</summary>
             <p>We use the right mix for the job: no-code and low-code platforms when they are reliable and maintainable, and custom code or API work when the process demands it. Reliability and clarity come first.</p>
           </details>
-          <details class="faq-item">
+          <details class="faq-item glass-card">
             <summary>How long does a typical engagement take?</summary>
             <p>Scoped automations often go live in weeks, not months. Complex multi-system projects are phased so you see value early while we continue building the rest of the system.</p>
           </details>
-          <details class="faq-item">
+          <details class="faq-item glass-card">
             <summary>Will we own the automations?</summary>
             <p>Yes. Systems are built in your accounts where possible, documented, and handed over with clear runbooks so your team can operate and extend them.</p>
           </details>
-          <details class="faq-item">
+          <details class="faq-item glass-card">
             <summary>What does the waitlist process look like?</summary>
-            <p>Join the waitlist with a short description of the process you want to improve. We’ll review fit and reach out to schedule a focused conversation about priorities and next steps.</p>
+            <p>Join the waitlist with a short note about your business and the processes you want to improve. We review submissions and reach out to schedule a discovery conversation when capacity opens.</p>
           </details>
         </div>
       </div>
     </section>
 
-    <!-- WAITLIST (moved to bottom) -->
+    <!-- WAITLIST -->
     <section class="section waitlist-section" id="waitlist">
       <div class="container">
         <div class="waitlist-card">
           <div class="waitlist-copy">
             <p class="eyebrow">Early access</p>
-            <h2>Join the waitlist</h2>
-            <p class="waitlist-lead">
-              Tell us the process that costs you the most time. We’ll review your stack and reach out with a clear path to automate it.
+            <h2>Join the waitlist for custom automation systems</h2>
+            <p>
+              Tell us about the processes that cost you the most time. We’ll reach out when we can take on new builds and share what a first engagement typically looks like.
             </p>
-            <ul class="waitlist-points">
-              <li>Priority access when spots open</li>
-              <li>Focused conversation on your highest-ROI workflows</li>
-              <li>No spam — only relevant next steps</li>
-            </ul>
           </div>
           <div class="waitlist-form-wrap">
             <form id="waitlist-form" novalidate>
-              <div class="form-group">
-                <label for="fullName">Full name</label>
-                <input type="text" id="fullName" name="fullName" required placeholder="Alex Morgan" autocomplete="name" />
+              <div class="form-row">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required autocomplete="name" placeholder="Your name" />
               </div>
-              <div class="form-group">
+              <div class="form-row">
                 <label for="email">Work email</label>
-                <input type="email" id="email" name="email" required placeholder="alex@company.com" autocomplete="email" />
+                <input type="email" id="email" name="email" required autocomplete="email" placeholder="you@company.com" />
               </div>
-              <div class="form-group">
-                <label for="company">Company name</label>
-                <input type="text" id="company" name="company" required placeholder="Acme Ops" autocomplete="organization" />
+              <div class="form-row">
+                <label for="company">Company (optional)</label>
+                <input type="text" id="company" name="company" autocomplete="organization" placeholder="Company name" />
               </div>
-              <div class="form-group">
-                <label for="process">What process do you want to automate?</label>
-                <textarea id="process" name="process" rows="3" required placeholder="e.g. Lead follow-up from form → CRM → Slack + email sequence"></textarea>
+              <div class="form-row">
+                <label for="challenge">What do you want to automate?</label>
+                <textarea id="challenge" name="challenge" placeholder="e.g. lead follow-up, reporting, client onboarding…"></textarea>
               </div>
-              <div class="form-group">
-                <label for="budget">Monthly automation budget <span class="optional">(optional)</span></label>
-                <select id="budget" name="budget">
-                  <option value="">Select a range</option>
-                  <option value="under-1k">Under $1,000</option>
-                  <option value="1k-3k">$1,000 – $3,000</option>
-                  <option value="3k-7k">$3,000 – $7,000</option>
-                  <option value="7k-plus">$7,000+</option>
-                  <option value="not-sure">Not sure yet</option>
-                </select>
-              </div>
-              <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
-                Request early access
-              </button>
-              <p class="form-note">No spam. We’ll only contact you about your automation needs.</p>
+              <button type="submit" class="btn btn-primary btn-full" id="submit-btn">Join the waitlist</button>
             </form>
             <div class="form-success" id="form-success" hidden>
-              <div class="success-icon">✓</div>
+              <div class="success-icon" aria-hidden="true">✓</div>
               <h3>You’re on the list</h3>
-              <p>Thanks for joining. We’ll review your process and reach out within a few business days with next steps.</p>
+              <p>Thanks — we’ll be in touch when capacity opens for new automation builds.</p>
             </div>
           </div>
         </div>
@@ -368,14 +399,11 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img src="logo.jpg" alt="IVORA" class="logo-img" width="120" height="34" />
-        <p class="elevator">
-          IVORA designs and builds custom automation systems that eliminate repetitive work, connect your tools, and give your business cleaner operations. We turn manual processes into reliable, scalable workflows so you can focus on growth.
-        </p>
+        <img src="logo.jpg" alt="IVORA" class="logo-img" width="120" height="32" />
+        <p>Custom automation systems that connect your tools, cut repetitive work, and scale operations without a large tech team.</p>
       </div>
       <div class="footer-links">
         <a href="#services">Services</a>
@@ -384,7 +412,7 @@
         <a href="#faq">FAQ</a>
         <a href="#waitlist">Waitlist</a>
       </div>
-      <p class="copyright">© 2026 IVORA. Intelligence Value Operation and Reliable Automation.</p>
+      <p class="copyright">© 2026 IVORA. All rights reserved.</p>
     </div>
   </footer>
 
