@@ -2,185 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;600;700&family=Inter+Tight:wght@400;500;600;700&display=swap");
-
-:root {
-  --background: #07080f;
-  --foreground: #f1f5f9;
-  --bg: #07080f;
-  --card: rgba(17, 19, 34, 0.72);
-  --border: rgba(167, 139, 250, 0.18);
-  --accent: #8b5cf6;
-  --accent-b: #c4b5fd;
-  --text: #f1f5f9;
-  --mute: #94a3b8;
-}
-
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
-  background: var(--bg);
-  color: var(--text);
   min-height: 100%;
-  font-family: "Inter Tight", Inter, system-ui, sans-serif;
+  background: #ffffff;
+  color: #0b0b0c;
 }
 
-.iv-loading {
-  min-height: 100svh;
-  display: grid;
-  place-items: center;
-  background: #07080f;
-  color: #c4b5fd;
-  letter-spacing: 0.08em;
-  font-size: 0.85rem;
+body {
+  overflow: hidden;
 }
 
-.iv-root {
-  background: var(--bg);
-  color: var(--text);
-  min-height: 100%;
-  background-image:
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(109, 40, 217, 0.16), transparent 55%),
-    radial-gradient(ellipse 50% 30% at 100% 80%, rgba(99, 102, 241, 0.06), transparent 50%);
+@media (max-width: 768px) {
+  body {
+    overflow: auto;
+  }
 }
-
-.iv-header {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 50;
-  display: flex; align-items: center; justify-content: space-between;
-  padding: 1rem 1.5rem;
-  background: rgba(7, 8, 15, 0.75);
-  backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--border);
-}
-.iv-brand { background: none; border: 0; cursor: pointer; padding: 0; }
-.iv-brand img { height: 32px; width: auto; display: block; }
-.iv-nav.desktop { display: none; gap: 0.35rem; }
-@media (min-width: 960px) {
-  .iv-nav.desktop { display: flex; }
-  .iv-menu-btn { display: none !important; }
-}
-.iv-nav button {
-  background: none; border: 0; color: var(--mute); font: inherit;
-  font-size: 0.8rem; padding: 0.4rem 0.7rem; border-radius: 999px; cursor: pointer;
-}
-.iv-nav button.is-on, .iv-nav button:hover { color: var(--text); background: rgba(139,92,246,0.12); }
-.iv-menu-btn {
-  width: 40px; height: 40px; border: 1px solid var(--border); border-radius: 10px;
-  background: transparent; display: flex; flex-direction: column; justify-content: center; gap: 6px; padding: 0 10px; cursor: pointer;
-}
-.iv-menu-btn span { display: block; height: 2px; background: var(--text); border-radius: 1px; }
-.iv-menu {
-  position: fixed; inset: 0; z-index: 40; background: rgba(7,8,15,0.96);
-  display: flex; flex-direction: column; justify-content: center; gap: 0.5rem; padding: 5rem 1.5rem;
-}
-.iv-menu button {
-  background: none; border: 0; color: var(--text); font: inherit; font-size: 1.25rem;
-  text-align: left; padding: 0.75rem 0; display: flex; align-items: baseline; gap: 1rem; cursor: pointer;
-}
-.iv-menu-n { color: var(--accent-b); font-size: 0.85rem; font-weight: 600; min-width: 2rem; }
-
-.iv-scene {
-  min-height: 100svh; display: flex; align-items: center; padding: 6rem 1.5rem 4rem;
-  position: relative;
-}
-.iv-inner { width: 100%; max-width: 1080px; margin: 0 auto; }
-.iv-inner.narrow { max-width: 42rem; }
-.iv-home { min-height: 100svh; }
-.iv-eyebrow {
-  font-size: 0.75rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--accent-b); margin: 0 0 1rem;
-}
-h1, h2 {
-  font-family: "Bricolage Grotesque", system-ui, sans-serif;
-  font-weight: 600; letter-spacing: -0.03em; line-height: 1.15; margin: 0 0 1.25rem;
-}
-h1 { font-size: clamp(2.1rem, 5.5vw, 3.6rem); }
-h2 { font-size: clamp(1.65rem, 3.5vw, 2.4rem); }
-.iv-accent { color: var(--accent-b); }
-.iv-lead { font-size: 1.1rem; line-height: 1.65; color: var(--mute); max-width: 36rem; margin: 0 0 1.75rem; }
-.iv-ctas { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 2.5rem; }
-.iv-btn {
-  font: inherit; font-weight: 600; font-size: 0.95rem; border-radius: 999px; padding: 0.85rem 1.4rem;
-  cursor: pointer; border: 1px solid transparent; transition: background 0.2s, border-color 0.2s, color 0.2s;
-}
-.iv-btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
-.iv-btn.primary:hover { background: #7c3aed; }
-.iv-btn.ghost { background: transparent; color: var(--text); border-color: var(--border); }
-.iv-btn.ghost:hover { border-color: var(--accent); color: var(--accent-b); }
-.iv-btn.full { width: 100%; }
-.iv-stats {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; max-width: 32rem;
-}
-.iv-stats strong { display: block; font-size: 1.1rem; color: var(--accent-b); }
-.iv-stats span { font-size: 0.8rem; color: var(--mute); }
-.iv-scroll-hint {
-  position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%);
-  font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--mute);
-}
-
-.iv-grid-2 {
-  display: grid; gap: 1rem; margin-top: 2rem;
-}
-@media (min-width: 700px) { .iv-grid-2 { grid-template-columns: 1fr 1fr; } }
-.iv-grid-4 {
-  display: grid; gap: 1rem; margin-top: 2rem;
-}
-@media (min-width: 700px) { .iv-grid-4 { grid-template-columns: repeat(4, 1fr); } }
-.iv-card {
-  padding: 1.35rem 1.4rem; border-radius: 16px;
-  background: var(--card); border: 1px solid var(--border);
-  backdrop-filter: blur(12px);
-}
-.iv-card h3 { margin: 0 0 0.5rem; font-size: 1.05rem; font-family: "Bricolage Grotesque", system-ui, sans-serif; }
-.iv-card p { margin: 0; color: var(--mute); font-size: 0.95rem; line-height: 1.55; }
-.iv-services { list-style: none; margin: 2rem 0 0; padding: 0; display: grid; gap: 0.75rem; }
-@media (min-width: 600px) { .iv-services { grid-template-columns: 1fr 1fr; } }
-.iv-services li {
-  display: flex; align-items: center; gap: 0.75rem; padding: 0.9rem 1.1rem;
-  border-radius: 12px; border: 1px solid var(--border); background: var(--card);
-}
-.iv-dot {
-  width: 8px; height: 8px; border-radius: 50%; background: var(--accent); flex-shrink: 0;
-  box-shadow: 0 0 12px rgba(139,92,246,0.6);
-}
-.iv-chips { display: flex; flex-wrap: wrap; gap: 0.65rem; margin-top: 2rem; }
-.iv-chip {
-  padding: 0.65rem 1.1rem; border-radius: 999px; border: 1px solid var(--border);
-  background: rgba(139,92,246,0.08); font-size: 0.9rem;
-}
-.iv-belief { background: radial-gradient(ellipse at center, rgba(139,92,246,0.12), transparent 60%); }
-.iv-belief blockquote {
-  margin: 0; font-family: "Bricolage Grotesque", system-ui, sans-serif;
-  font-size: clamp(1.6rem, 3.5vw, 2.4rem); line-height: 1.25; letter-spacing: -0.03em;
-  color: var(--accent-b);
-}
-.iv-metric { text-align: center; }
-.iv-metric-v { display: block; font-size: 1.75rem; font-weight: 700; color: var(--accent-b); font-family: "Bricolage Grotesque", system-ui, sans-serif; }
-.iv-metric-u { display: block; font-size: 0.85rem; color: var(--mute); margin-bottom: 0.65rem; }
-.iv-proof-row { display: flex; flex-wrap: wrap; gap: 0.75rem 1.5rem; margin-top: 1.5rem; color: var(--mute); font-weight: 500; }
-.iv-steps { display: grid; gap: 1rem; margin-top: 2rem; }
-@media (min-width: 800px) { .iv-steps { grid-template-columns: repeat(3, 1fr); } }
-.iv-step-n { font-size: 0.8rem; font-weight: 700; color: var(--accent-b); letter-spacing: 0.08em; }
-.iv-step h3 { margin: 0.5rem 0; font-family: "Bricolage Grotesque", system-ui, sans-serif; }
-.iv-form {
-  margin-top: 1.5rem; max-width: 28rem;
-  display: flex; flex-direction: column; gap: 1rem;
-  padding: 1.5rem; border-radius: 16px;
-  background: var(--card); border: 1px solid var(--border);
-}
-.iv-form label { display: flex; flex-direction: column; gap: 0.35rem; font-size: 0.85rem; color: var(--mute); }
-.iv-form input, .iv-form textarea {
-  font: inherit; color: var(--text); background: rgba(255,255,255,0.04);
-  border: 1px solid var(--border); border-radius: 10px; padding: 0.7rem 0.85rem;
-}
-.iv-form input:focus, .iv-form textarea:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 3px rgba(139,92,246,0.2); }
-.iv-success { margin-top: 1.5rem; padding: 2rem; border-radius: 16px; border: 1px solid var(--border); background: var(--card); max-width: 28rem; }
-.iv-success h3 { margin: 0 0 0.5rem; }
-.iv-success p { margin: 0; color: var(--mute); }
-.iv-foot {
-  padding: 2.5rem 1.5rem; border-top: 1px solid var(--border);
-  display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; justify-content: space-between;
-  max-width: 1080px; margin: 0 auto;
-}
-.iv-foot img { height: 28px; width: auto; opacity: 0.9; }
-.iv-foot p { margin: 0; font-size: 0.85rem; color: var(--mute); }

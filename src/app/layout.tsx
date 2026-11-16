@@ -4,7 +4,7 @@ import "./globals.css"
 export const metadata: Metadata = {
   title: "IVORA — Custom Business Automation Systems",
   description:
-    "IVORA designs and builds custom automation systems that eliminate repetitive work, connect your tools, and scale operations without a large tech team. Join the waitlist.",
+    "IVORA designs and builds custom automation systems that eliminate repetitive work, connect your tools, and scale operations without a large tech team.",
   keywords: [
     "business automation",
     "workflow automation",
@@ -29,10 +29,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="dark">
-      <body className="antialiased bg-[#07080f] text-slate-100 overflow-x-hidden">
-        {children}
-      </body>
+    <html lang="en">
+      <body className="antialiased">{children}</body>
     </html>
   )
 }
