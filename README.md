@@ -6,8 +6,8 @@ Custom business automation systems — cinematic Next.js landing.
 
 - Next.js 15 (App Router)
 - Tailwind CSS
-- GSAP + ScrollTrigger
-- Three.js (Oriel-inspired process scene)
+- GSAP + ScrollTrigger (9-scene scroll theater)
+- Dark purple glass aesthetic
 
 ## Develop
 
@@ -16,6 +16,16 @@ npm install
 npm run dev
 ```
 
+## Build
+
+```bash
+npm run build
+npm start
+```
+
 ## Deploy
 
-Connected to Vercel. Push to `main` triggers production deploy.
+Connected to Vercel project **ivora** (framework: Next.js).
+Production: https://ivora-code-kyng.vercel.app
+
+Place `logo.jpg` in `public/` for the brand mark.
