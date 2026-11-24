@@ -12,14 +12,14 @@ const CinematicLanding = dynamic(
           minHeight: "100svh",
           display: "grid",
           placeItems: "center",
-          background: "#ffffff",
+          background: "#f7f6f3",
           color: "#0b0b0c",
           fontFamily: "system-ui, sans-serif",
           letterSpacing: "0.06em",
           fontSize: "0.85rem",
         }}
       >
-        <p>Loading…</p>
+        <p>Loading IVORA…</p>
       </div>
     ),
   }
